@@ -1,0 +1,334 @@
+/* =========================================
+   GAMESSTORE - ESTILOS DE AUTENTICACIÓN
+   Paleta: #4b1c71, #7f4ca5, #b57edc, #dbb6ee, #fff0ff
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #4b1c71; /* Fondo principal oscuro */
+    color: #fff0ff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- NAV BAR (Estandarizado) --- */
+.navbar {
+    background-color: #2e0e47; /* Un tono más oscuro para contraste */
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #7f4ca5;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+}
+
+.nav-logo h1 {
+    font-family: 'Bungee', cursive;
+    font-size: 1.5em;
+    color: #fff0ff;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8em;
+    color: #fff0ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #dbb6ee;
+}
+
+/* --- CONTENEDOR CENTRAL --- */
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.page-title {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3.5em;
+    color: #fff0ff;
+    text-shadow: 4px 4px 0 #7f4ca5;
+    margin-bottom: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.page-subtitle {
+    font-size: 1.1em;
+    color: #dbb6ee;
+    margin-bottom: 40px;
+    text-align: center;
+    max-width: 600px;
+}
+
+/* --- TARJETA DE FORMULARIO --- */
+.auth-card {
+    background-color: #fff0ff; /* Fondo claro para el formulario */
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    border: 4px solid #b57edc;
+    box-shadow: 8px 8px 0 #7f4ca5; /* Efecto 3D */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Bungee', cursive;
+    color: #4b1c71; /* Texto oscuro */
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 3px solid #b57edc;
+    border-radius: 8px;
+    background-color: #f4eaff;
+    font-size: 1em;
+    color: #4b1c71;
+    outline: none;
+    font-weight: bold;
+}
+
+.form-group input:focus {
+    border-color: #7f4ca5;
+    background-color: #ffffff;
+}
+
+/* --- BOTÓN DE ACCIÓN --- */
+.btn-action {
+    width: 100%;
+    padding: 15px;
+    background-color: #4b1c71;
+    color: #fff0ff;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s, background-color 0.3s;
+    border: 3px solid transparent;
+}
+
+.btn-action:hover {
+    background-color: #7f4ca5;
+    transform: scale(1.02);
+    border-color: #fff0ff;
+}
+
+/* --- ENLACES Y MENSAJES --- */
+.auth-footer {
+    margin-top: 25px;
+    text-align: center;
+    color: #4b1c71;
+    font-weight: bold;
+}
+
+.auth-footer a {
+    color: #7f4ca5;
+    text-decoration: underline;
+}
+
+.message-box {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    display: none; /* Oculto por defecto */
+}
+
+.message-error {
+    background-color: #ffcccc;
+    color: #cc0000;
+    border: 1px solid #cc0000;
+    display: block;
+}
+
+.message-success {
+    background-color: #ccffcc;
+    color: #006600;
+    border: 1px solid #006600;
+    display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .navbar { flex-direction: column; gap: 15px; padding: 15px; }
+    .page-title { font-size: 2.5em; }
+    .auth-card { padding: 25px; }
+}
+
+.profile-icon {
+    width: 100px;
+    height: 100px;
+    background-color: #b57edc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    border: 4px solid #4b1c71;
+    font-size: 3em;
+}
+.profile-label {
+    font-family: 'Bungee', cursive;
+    color: #4b1c71;
+    font-size: 0.9em;
+    margin-top: 15px;
+}
+.profile-value {
+    font-family: sans-serif;
+    font-size: 1.2em;
+    color: #333;
+    background: #f4eaff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #b57edc;
+    font-weight: bold;
+}
+.btn-logout {
+    background-color: #cc0000; /* Rojo para cerrar sesión */
+    margin-top: 30px;
+}
+.btn-logout:hover {
+    background-color: #ff3333;
+}
+
+/* =========================================
+   ESTILOS DEL FOOTER
+   ========================================= */
+.footer {
+    /* Fondo muy oscuro solicitado */
+    background-color: #2e0e47; 
+    color: #fff0ff;
+    padding: 40px 20px 20px 20px;
+    /* Borde superior con el morado más oscuro de la paleta */
+    border-top: 5px solid #4b1c71; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
+}
+
+.footer-section {
+    padding: 10px;
+    /* Mínimo de ancho para que se distribuya bien */
+    min-width: 180px; 
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-family: 'Bungee', cursive;
+    /* Color medio claro para encabezados */
+    color: #dbb6ee; 
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+    color: #b57edc;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #fff0ff;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    /* Color para el efecto hover */
+    color: #b57edc; 
+}
+
+/* --- Estilos para los enlaces de Redes Sociales --- */
+.social-links a {
+    color: #fff0ff;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #b57edc; 
+}
+
+/* --- Estilos para la sección de Derechos de Autor (footer-bottom) --- */
+.footer-bottom {
+    text-align: center;
+    /* Separador con color medio oscuro */
+    border-top: 1px solid #7f4ca5; 
+    padding-top: 15px;
+    margin-top: 15px;
+    font-size: 0.8em;
+    color: #b57edc;
+}
+
+/* --- Media Query para Responsive del Footer (Móviles) --- */
+@media (max-width: 600px) {
+    .footer-content {
+        /* Apilar verticalmente */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        /* Centrar texto de las secciones */
+        text-align: center;
+        min-width: 100%;
+    }
+}

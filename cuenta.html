@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamesStore - Mi Perfil</title>
+    
+    <link rel="stylesheet" href="cuenta.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Luckiest+Guy&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="img/gs-logo-2.png" alt="Logo" class="logo-img">
+            <h1>Games Store</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="juegos.html">Juegos</a>
+            <a href="cuenta.html" class="active">Cuenta</a>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        
+        <h2 class="page-title">PERFIL DE<br>JUGADOR</h2>
+        <p class="page-subtitle">Gestiona tu información y revisa tus estadísticas.</p>
+
+        <div class="auth-card" id="profileCard" style="display: none;">
+            
+            <div class="profile-icon">👤</div>
+
+            <div style="text-align: center;">
+                
+                <div class="profile-label">JUGADOR:</div>
+                <div id="displayUser" class="profile-value">Cargando...</div>
+
+                <div class="profile-label">CORREO ELECTRÓNICO:</div>
+                <div id="displayEmail" class="profile-value">Cargando...</div>
+
+                <div class="profile-label">ESTADO:</div>
+                <div class="profile-value" style="color: green;">🟢 En Línea</div>
+
+                <button id="btnLogout" class="btn-action btn-logout">CERRAR SESIÓN</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script-auth.js"></script>
+
+</body>
+<footer class="footer">
+    <div class="footer-content">
+        
+        <div class="footer-section about">
+            <h3>Games Store</h3>
+            <p>Tu destino definitivo para encontrar las mejores aventuras virtuales.</p>
+        </div>
+
+        <div class="footer-section links">
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+                <li><a href="cuenta.html">Mi Cuenta</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section legal">
+            <h3>Legal</h3>
+            <ul>
+                <li><a href="#">Términos de Servicio</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section social"><h3>Síguenos</h3>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>        
+                <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        &copy; 2025 Games Store | Desarrollado con 💜
+    </div>
+</footer>
+</html>

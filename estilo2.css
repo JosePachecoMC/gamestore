@@ -1,0 +1,239 @@
+/* Paleta de colores:
+#4b1c71 (Más oscuro - Fondo)
+#7f4ca5 (Medio oscuro - Tarjetas)
+#b57edc (Medio claro)
+#dbb6ee (Claro - Texto descriptivo)
+#fff0ff (Casi blanco - Títulos)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #4b1c71; /* Fondo general de la página */
+}
+
+/* --- NAV BAR: Contenedor Principal --- */
+.navbar {
+    background-color: #4b1c71;
+    color: #fff0ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+/* --- NAV BAR: Elementos a la Izquierda (Logo y Título) --- */
+.nav-logo {
+    /* Orden para que esté a la izquierda */
+    order: 0; 
+    /* Alinea el logo y el h1 uno al lado del otro */
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para la imagen del logo */
+.logo-img {
+    height: 40px; 
+    width: auto; 
+    margin-top: -0.5em; /* Ajuste manual para centrado visual */
+}
+
+/* Estilos para el texto del logo (Games Store) */
+.nav-logo h1 {
+    font-size: 1.5em;
+    font-family: 'Bungee', cursive;
+    margin-left: 10px; /* Separación entre el logo y el texto */
+}
+
+/* --- NAV BAR: Enlaces a la Derecha --- */
+.nav-links {
+    /* Orden para que esté a la derecha */
+    order: 1; 
+}
+
+/* Estilos para los enlaces (Inicio, Juegos, Cuenta) */
+.nav-links a {
+    color: #fff0ff;
+    text-decoration: none;
+    margin-left: 25px; 
+    font-size: 0.9em; 
+    transition: color 0.3s;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Estilos de interacción (Hover y activo) */
+.nav-links a:hover,
+.nav-links a.active {
+    color: #dbb6ee;
+}
+
+/* --- TÍTULO DE PÁGINA --- */
+.titulo-seccion {
+    margin-top: 50px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.page-title {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 4em;
+    color: #fff0ff;
+    line-height: 1.2;
+    text-shadow: 4px 4px 0 #7f4ca5;
+    margin-bottom: 50px;
+}
+
+/* --- CONTENEDOR DE CATEGORÍAS (MODIFICADO) --- */
+.categorias-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; /* <<< CAMBIO: Ahora están centrados */
+    gap: 30px; 
+    padding: 0 50px 100px 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- TARJETAS DE CATEGORÍA --- */
+.categoria-card {
+    background-color: #7f4ca5;
+    padding: 30px;
+    width: 300px; 
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+    border: 2px solid transparent;
+    text-align: center; /* Centramos también el texto dentro de la tarjeta */
+}
+
+.categoria-card:hover {
+    transform: translateY(-10px); 
+    background-color: #6a3b8d;
+    border: 2px solid #dbb6ee;
+}
+
+.categoria-card h3 {
+    font-family: 'Bungee', cursive;
+    color: #fff0ff;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #b57edc;
+    padding-bottom: 10px;
+}
+
+.categoria-card p {
+    color: #dbb6ee;
+    font-size: 1.3em;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+a {
+    text-decoration: none; /* Esto elimina cualquier subrayado (línea inferior) */
+}
+
+/* =========================================
+   ESTILOS DEL FOOTER
+   ========================================= */
+.footer {
+    /* Fondo muy oscuro solicitado */
+    background-color: #2e0e47; 
+    color: #fff0ff;
+    padding: 40px 20px 20px 20px;
+    /* Borde superior con el morado más oscuro de la paleta */
+    border-top: 5px solid #4b1c71; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
+}
+
+.footer-section {
+    padding: 10px;
+    /* Mínimo de ancho para que se distribuya bien */
+    min-width: 180px; 
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-family: 'Bungee', cursive;
+    /* Color medio claro para encabezados */
+    color: #dbb6ee; 
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+    color: #b57edc;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #fff0ff;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    /* Color para el efecto hover */
+    color: #b57edc; 
+}
+
+/* --- Estilos para los enlaces de Redes Sociales --- */
+.social-links a {
+    color: #fff0ff;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #b57edc; 
+}
+
+/* --- Estilos para la sección de Derechos de Autor (footer-bottom) --- */
+.footer-bottom {
+    text-align: center;
+    /* Separador con color medio oscuro */
+    border-top: 1px solid #7f4ca5; 
+    padding-top: 15px;
+    margin-top: 15px;
+    font-size: 0.8em;
+    color: #b57edc;
+}
+
+/* --- Media Query para Responsive del Footer (Móviles) --- */
+@media (max-width: 600px) {
+    .footer-content {
+        /* Apilar verticalmente */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        /* Centrar texto de las secciones */
+        text-align: center;
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,170 @@
+/* Paleta de colores:
+#4b1c71 (Más oscuro - Títulos, Botones)
+#7f4ca5 (Medio oscuro - Resaltado)
+#b57edc (Medio claro)
+#dbb6ee (Claro - Texto descriptivo)
+#fff0ff (Casi blanco - Fondo)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #fff0ff; /* Fondo general de la página - CASI BLANCO */
+}
+
+a {
+    text-decoration: none; /* Quitar subrayado por defecto en todos los enlaces */
+}
+
+/* --- NAV BAR: Contenedor Principal (Optimizado) --- */
+.navbar {
+    background-color: #4b1c71;
+    color: #fff0ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+/* --- NAV BAR: Elementos a la Izquierda (Logo y Título) --- */
+.nav-logo {
+    order: 0; 
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px; 
+    width: auto; 
+    margin-top: -0.5em;
+}
+
+.nav-logo h1 {
+    font-size: 1.5em;
+    font-family: 'Bungee', cursive;
+    margin-left: 10px;
+}
+
+/* --- NAV BAR: Enlaces a la Derecha --- */
+.nav-links {
+    order: 1; 
+}
+
+.nav-links a {
+    color: #fff0ff;
+    text-decoration: none;
+    margin-left: 25px; 
+    font-size: 0.9em; 
+    transition: color 0.3s;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #dbb6ee;
+}
+
+/* --- TÍTULO DE PÁGINA ESPECÍFICO --- */
+.titulo-seccion {
+    margin-top: 50px;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+/* Estilo para JUEGOS LIGEROS (Fuente Luckiest Guy) */
+.page-title-ligeros {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 4em;
+    color: #4b1c71; /* Color oscuro sobre fondo claro */
+    line-height: 1.2;
+    text-shadow: 4px 4px 0 #b57edc; /* Sombra clara para el efecto 3D */
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #7f4ca5;
+    font-size: 1.2em;
+}
+
+/* --- LISTADO DE PRODUCTOS LIGEROS --- */
+.productos-ligeros-container {
+    /* Centraliza el contenedor principal */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 20px 80px 20px;
+    
+    /* Organiza los items */
+    display: flex;
+    flex-direction: column; /* Apila los juegos verticalmente */
+    gap: 30px; /* Espacio entre las tarjetas de juego */
+}
+
+/* Tarjeta de juego individual */
+.juego-card {
+    background-color: #f8f8ff; /* Blanco muy claro */
+    border: 2px solid #b57edc;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    text-align: left;
+    box-shadow: 4px 4px 0 #7f4ca5; /* Sombra sólida */
+    transition: box-shadow 0.2s;
+}
+
+.juego-card:hover {
+    box-shadow: 6px 6px 0 #4b1c71;
+}
+
+.juego-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.juego-info {
+    flex-grow: 1;
+}
+
+.juego-info h3 {
+    font-family: 'Bungee', cursive;
+    color: #4b1c71;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.tipo-juego {
+    color: #7f4ca5;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.juego-descripcion {
+    color: #333;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+/* Botón de COMPRAR */
+.btn-comprar {
+    display: inline-block;
+    background-color: #4b1c71;
+    color: #fff0ff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7em;
+    transition: background-color 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #7f4ca5;
+}

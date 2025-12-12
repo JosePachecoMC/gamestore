@@ -1,0 +1,70 @@
+/* Paleta de colores:
+#4b1c71 (Más oscuro - Títulos, Botones)
+#7f4ca5 (Medio oscuro - Resaltado)
+#b57edc (Medio claro)
+#dbb6ee (Claro - Texto descriptivo)
+#fff0ff (Casi blanco - Fondo)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #fff0ff; /* Fondo general de la página - CASI BLANCO */
+}
+
+a {
+    text-decoration: none; /* Quitar subrayado por defecto en todos los enlaces */
+}
+
+/* --- NAV BAR: Contenedor Principal (Optimizado) --- */
+.navbar {
+    background-color: #4b1c71;
+    color: #fff0ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+/* --- NAV BAR: Elementos a la Izquierda (Logo y Título) --- */
+.nav-logo {
+    order: 0; 
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px; 
+    width: auto; 
+    margin-top: -0.5em;
+}
+
+.nav-logo h1 {
+    font-size: 1.5em;
+    font-family: 'Bungee', cursive;
+    margin-left: 10px;
+}
+
+/* --- NAV BAR: Enlaces a la Derecha --- */
+.nav-links {
+    order: 1; 
+}
+
+.nav-links a {
+    color: #fff0ff;
+    text-decoration: none;
+    margin-left: 25px; 
+    font-size: 0.9em; 
+    transition: color 0.3s;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #dbb6ee;
+}

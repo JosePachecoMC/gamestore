@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamesStore - Crear Cuenta</title>
+    
+    <link rel="stylesheet" href="cuenta.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Luckiest+Guy&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="img/gs-logo-2.png" alt="Logo" class="logo-img">
+            <h1>Games Store</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="juegos.html">Juegos</a>
+            <a href="cuenta.html" class="active">Cuenta</a>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        
+        <h2 class="page-title">ÚNETE A LA<br>PARTIDA</h2>
+        <p class="page-subtitle">Crea tu cuenta gratis para guardar tu progreso y acceder a ofertas exclusivas.</p>
+
+        <div class="auth-card">
+            <form id="registroForm">
+                
+                <div class="form-group">
+                    <label for="nombreUsuario">Usuario Gamer:</label>
+                    <input type="text" id="nombreUsuario" placeholder="Ej: MasterChief117" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailRegistro">Correo Electrónico:</label>
+                    <input type="email" id="emailRegistro" placeholder="tu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="passRegistro">Contraseña:</label>
+                    <input type="password" id="passRegistro" placeholder="******" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="passConfirm">Confirmar Contraseña:</label>
+                    <input type="password" id="passConfirm" placeholder="******" required>
+                </div>
+
+                <button type="submit" class="btn-action">CREAR CUENTA</button>
+            </form>
+
+            <div id="mensajeRegistro" class="message-box"></div>
+
+            <p class="auth-footer">
+                ¿Ya tienes cuenta? <a href="acceder.html">Inicia Sesión aquí</a>
+            </p>
+        </div>
+
+    </div>
+
+    <script src="script-auth.js"></script>
+
+</body>
+</html>
